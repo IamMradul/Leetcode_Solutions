@@ -1,49 +1,68 @@
-// Author: Mradul Gupta
-// GitHub: https://github.com/IamMradul
+/*
+Author: Mradul Gupta
+GitHub Username: IamMradul
+
+LeetCode Question: Merge Sorted Array
+Link: https://leetcode.com/problems/merge-sorted-array/
+*/
 
 #include <bits/stdc++.h>
 using namespace std;
 
-// Problem Link: https://leetcode.com/problems/merge-sorted-array/
-// ------------------- LeetCode Solution Starts -------------------
 class Solution {
 public:
     void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
-        int i = m - 1;      // Last element of nums1 (meaningful part)
-        int j = n - 1;      // Last element of nums2
-        int k = m + n - 1;  // Last index of nums1
-        
+        int i = m - 1;
+        int j = n - 1;
+        int k = m + n - 1;
+
         while (i >= 0 && j >= 0) {
-            if (nums1[i] > nums2[j]) {
-                nums1[k--] = nums1[i--];
+            if (nums1[i] < nums2[j]) {
+                nums1[k] = nums2[j];
+                j--;
             } else {
-                nums1[k--] = nums2[j--];
+                nums1[k] = nums1[i];
+                i--;
             }
+            k--;
         }
-        
+
         while (j >= 0) {
-            nums1[k--] = nums2[j--];
+            nums1[k] = nums2[j];
+            j--;
+            k--;
         }
     }
 };
-// ------------------- LeetCode Solution Ends -------------------
 
-// Main function for local testing
+// Main function for testing
 int main() {
-    Solution obj;
-    
+    Solution sol;
+
     vector<int> nums1 = {1, 2, 3, 0, 0, 0};
-    int m = 3;
     vector<int> nums2 = {2, 5, 6};
-    int n = 3;
-    
-    obj.merge(nums1, m, nums2, n);
-    
-    cout << "Merged Array: ";
-    for (int x : nums1) {
-        cout << x << " ";
-    }
+    int m = 3, n = 3;
+
+    cout << "Before merge: ";
+    for (int x : nums1) cout << x << " ";
     cout << endl;
-    
+
+    sol.merge(nums1, m, nums2, n);
+
+    cout << "After merge: ";
+    for (int x : nums1) cout << x << " ";
+    cout << endl;
+
+    // Additional test case
+    vector<int> nums3 = {4, 5, 6, 0, 0, 0};
+    vector<int> nums4 = {1, 2, 3};
+    m = 3, n = 3;
+
+    sol.merge(nums3, m, nums4, n);
+
+    cout << "Another test case result: ";
+    for (int x : nums3) cout << x << " ";
+    cout << endl;
+
     return 0;
 }
