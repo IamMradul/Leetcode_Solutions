@@ -23,9 +23,9 @@ The solutions are structured so they can be:
 
 ```text
 Leetcode_Solutions/
-├── 0001-two-sum.cpp
-├── 0053-maximum-subarray.cpp
-├── 0118-pascals-triangle.cpp
+├── 0001.cpp
+├── 0053.cpp
+├── 0118.cpp
 ├── ...
 ├── sorting.py
 └── README.md   # Project documentation
