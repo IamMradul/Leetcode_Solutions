@@ -23,13 +23,13 @@ The solutions are structured so they can be:
 
 ```text
 Leetcode_Solutions/
-├── Leetcode/
-│   ├── 0001-two-sum.cpp
-│   ├── 0053-maximum-subarray.cpp
-│   ├── 0118-pascals-triangle.cpp
-│   └── ...
+├── 0001-two-sum.cpp
+├── 0053-maximum-subarray.cpp
+├── 0118-pascals-triangle.cpp
+├── ...
+├── sorting.py
 └── README.md   # Project documentation
-
+```
 ## 🔹 Goals
 - 📚 Build a personal library of solved problems.  
 - 💡 Improve problem-solving and DSA skills in C++.  
