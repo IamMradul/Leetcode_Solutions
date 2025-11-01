@@ -9,7 +9,7 @@ for filename in os.listdir(folder):
 
        
         if num.isdigit():
-            new_name = f"{int(num):06d}.cpp"  # pad with 6 digits
+            new_name = f"{int(num):04d}.cpp"  # pad with 4 digits
             old_path = os.path.join(folder, filename)
             new_path = os.path.join(folder, new_name)
 
