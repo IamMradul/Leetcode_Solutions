@@ -24,8 +24,8 @@ The solutions are structured so they can be:
 ```text
 Leetcode_Solutions/
 ├── 0001.cpp
-├── 0053.cpp
-├── 0118.cpp
+├── 0002.cpp
+├── 0003.cpp
 ├── ...
 ├── sorting.py
 └── README.md   # Project documentation
